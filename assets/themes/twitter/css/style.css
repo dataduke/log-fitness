@@ -43,9 +43,6 @@ a:active { font-weight: bold; }
   padding-right: 20px;
   }
 
-.navbar .nav {
-  float: right; }
-
 .navbar .nav-back {
   list-style-type: none;
   float: right;
@@ -55,7 +52,12 @@ a:active { font-weight: bold; }
   /*padding-left: 10px;*/
   padding-right: 0px;
   }
-  
+
+.navbar .nav {
+  float: right; 
+  padding-right: 50px;
+  }
+
 /* posts index */
 .post > h3.title {
   position: relative;
