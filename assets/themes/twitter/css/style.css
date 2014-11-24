@@ -46,8 +46,16 @@ a:active { font-weight: bold; }
 .navbar .nav {
   float: right; }
 
-
-
+.navbar .nav-back {
+  list-style-type: none;
+  float: right;
+  display: block;
+  position: relative;
+  padding-top: 3px;
+  /*padding-left: 10px;*/
+  padding-right: 0px;
+  }
+  
 /* posts index */
 .post > h3.title {
   position: relative;
