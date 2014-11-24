@@ -1,0 +1,56 @@
+<div class="row-fluid post-full">
+  <div class="span12">
+
+    <h1>{{ page.title }}</h1>
+    <hr/>
+
+    <div class="meta">
+    <ul class="inline">
+      <li><i class="icon-calendar"></i></li> 
+      <li>{{ page.date | date:"%Y-%m-%d" }}</li>
+    </ul>
+    {% if page.line %}
+    <ul class="inline">
+      <li><i class="icon-book"></i></li> 
+      <li>{{page.line}}</li> 
+    </ul>
+    {% endif %}
+    <ul class="inline">
+      {% unless page.tags == empty %}
+      <li><i class="icon-tags"></i></li>
+          {% for tag in page.tags %}
+          {% unless tag contains "box" %}
+          <li>{{ tag }}</li>
+          {% endunless %}
+          {% endfor %}
+      {% endunless %}
+    </ul>
+    </div>
+    <hr/>
+
+    <div class="content">
+      {{ content }}
+    </div> 
+    <br/>
+    <hr>
+    <div class="pagination-center">
+    <div class="pagination">
+      <ul>
+      {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Older</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; Older</a></li>
+      {% endif %}
+        <li><a href="{{ HOME_PATH }}">Articles</a></li>
+      {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Newer &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>Newer &rarr;</a>
+      {% endif %}
+      </ul>
+    </div>
+    </div>
+    <hr>
+    <!-- {% include JB/comments %} -->
+  </div>
+</div>

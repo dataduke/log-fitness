@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- styles -->
+    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- fav and touch icons -->
+    <link rel="icon" href="{{ ASSET_PATH }}/img/favicon.png" type="image/png">
+    <!--<link rel="shortcut icon" href="images/favicon.ico">-->
+    <link rel="apple-touch-icon" href="{{ ASSET_PATH }}/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ ASSET_PATH }}/img/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ ASSET_PATH }}/img/apple-touch-icon-114.png">
+    
+
+    <!-- atom & rss feed -->
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <div class="nav-logo">
+          <a href="http://dataduke.github.io/fitness"><img alt="fitness" src="{{ ASSET_PATH }}/img/logo-ying-32.png"></a>
+          </div>
+          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+          <ul class="nav">
+            <li><a href="{{ BASE_PATH }}{{ site.JB.workouts_path }}">Workouts</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.nutrition_path }}">Nutrition</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.goals_path }}">Goals</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.competitions_path }}">Competitions</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.gear_path }}">Gear</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container-narrow">
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+    <div class="footer-center">
+      <ul class="footer-icon">
+      <li><a href="https://github.com/dataduke"><img alt="github/dataduke" src="{{ ASSET_PATH }}/img/github_icon.png"></a></li>
+      <li><a href="https://twitter.com/dataduke"><img alt="twitter/dataduke" src="{{ ASSET_PATH }}/img/twitter_icon.png"></a></li>
+      <li><a href="mailto:b.nothdurft@gmail.com"><img alt="email/benjamin" src="{{ ASSET_PATH }}/img/email_icon.png"></a></li>
+      </ul>
+    </div>
+     {% include JB/analytics %}
+
+  </body>
+</html>
