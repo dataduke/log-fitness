@@ -43,7 +43,18 @@ a:active { font-weight: bold; }
   padding-right: 20px;
   }
 
-.navbar .nav-back {
+.navbar .nav-right{
+  float: right;
+}
+
+.navbar .nav {
+  float: left; 
+  position: relative;
+  padding-top: 3px;
+  padding-right: 5px;
+}
+
+.navbar .nav-backlogo {
   list-style-type: none;
   float: right;
   display: block;
@@ -51,12 +62,8 @@ a:active { font-weight: bold; }
   padding-top: 3px;
   /*padding-left: 10px;*/
   padding-right: 0px;
-  }
+}
 
-.navbar .nav {
-  float: right; 
-  /*padding-right: 50px;*/
-  }
 
 /* posts index */
 .post > h3.title {
